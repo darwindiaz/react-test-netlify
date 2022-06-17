@@ -2,23 +2,31 @@ import React, { Component, useState } from 'react'
 
 import { FormControl, TextField, Box, Button } from '@mui/material/'
 import axios from 'axios';
-import { useHistory } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 
 import "./styles/UserForm.css"
 
 const UserForm = (props) => {
-    const { name, country, email } = props.user;
-    const history = useHistory();
+    const { name, country, email, phone, id } = props.user;
+    const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
             await axios.post("http://localhost:3000/users", props.user);
-            history.push("/list");
+            navigate("/list");
         } catch (error) {
             console.log(error);
         }
+    }
 
+    const handleEdit = async () => {
+        try {
+            await axios.put(`http://localhost:3000/users/${id}`, props.user);
+            navigate("/list");
+        } catch (error) {
+            console.log(error);
+        }
     }
 
     return (
@@ -49,7 +57,13 @@ const UserForm = (props) => {
                     />
                 </FormControl>
                 <Box>
-                    <Button type="submit" color="primary" variant="contained">Crear</Button>
+                    {
+                        props.isEdit ?
+                            <Button type="button" color="primary" variant="contained" onClick={handleEdit}>Editar</Button>
+                            :
+                            <Button type="submit" color="primary" variant="contained">Crear</Button>
+                    }
+
                 </Box>
             </form>
 

@@ -8,6 +8,7 @@ import List from './pages/List';
 import Layout from './layout/Layout';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import User from './pages/User';
+import Edit from './pages/Edit';
 
 export class App extends Component {
   render() {
@@ -19,6 +20,7 @@ export class App extends Component {
             <Route exact path="/form" element={<Form />}></Route>
             <Route exact path="/list" element={<List />}></Route>
             <Route exact path="/user/:id" element={<User />}></Route>
+            <Route exact path="/edit/:id" element={<Edit />}></Route>
           </Routes>
         </Layout>
       </BrowserRouter>

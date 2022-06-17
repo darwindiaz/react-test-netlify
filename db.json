@@ -23,22 +23,10 @@
     },
     {
       "id": "4",
-      "name": "Natalia Mejia",
+      "name": "Natalia Mejia Morringa",
       "country": "Ecuador",
-      "email": "darwindiaz@example.com",
+      "email": "nmm@example.com",
       "phone": "321987654"
-    },
-    {
-      "users": {
-        "name": "",
-        "country": "",
-        "email": "",
-        "phone": ""
-      },
-      "name": "Charles",
-      "country": "New York",
-      "email": "cmn@gmail.com",
-      "id": "8Yf2wDh"
     }
   ]
 }

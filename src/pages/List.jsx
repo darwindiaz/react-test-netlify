@@ -26,7 +26,7 @@ const List = () => {
             <h2 className="title-form"> Lista de Usuarios</h2>
             {
                 users.map((item, index) => {
-                    return <ItemUser key={index} user={item} isEdit />
+                    return <ItemUser key={index} user={item} isEdit isDelete />
                 })
             }
         </div>

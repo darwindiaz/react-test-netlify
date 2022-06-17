@@ -11,7 +11,7 @@ const Header = () => {
                     justifyContent: "space-evenly"
                 }}>
                     <IconButton>
-                        <img src='/logo512.png' height="50px" />
+                        <input type="image" img src={'/logo512.png'} alt="photo" height="50px" />
                     </IconButton>
                     <Link component={RouterLink} to="/" color="inherit">
                         Inicio

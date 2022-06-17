@@ -5,11 +5,11 @@ import { Link } from "react-router-dom"
 import axios from 'axios';
 
 const ItemUser = (props) => {
-    const { name, country, email, phone, id } = props.user
+    const { name, country, email, id } = props.user
 
     const handleDelete = async () => {
         try {
-            const response = await axios.delete(`http://localhost:3000/users/${id}`)
+            await axios.delete(`http://localhost:3000/users/${id}`)
             window.location.reload();
         } catch (error) {
             console.log(error);
@@ -19,7 +19,7 @@ const ItemUser = (props) => {
     return (
         <div>
             <Card sx={{
-                maxWidth: "200px",
+                maxWidth: "600px",
                 maxHeight: "200px",
                 margin: "8px auto",
                 display: "flex",
@@ -29,7 +29,8 @@ const ItemUser = (props) => {
             }}>
                 <CardMedia
                     sx={{
-                        flex: 1
+                        flex: 1,
+                        maxHeight: '200px'
                     }}
                     component="img"
                     image="/logo512.png"

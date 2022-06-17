@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react'
+import React from 'react'
 
 import { FormControl, TextField, Box, Button } from '@mui/material/'
 import axios from 'axios';
@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom"
 import "./styles/UserForm.css"
 
 const UserForm = (props) => {
-    const { name, country, email, phone, id } = props.user;
+    const { name, country, email, id } = props.user;
     const navigate = useNavigate();
 
     const handleSubmit = async (e) => {

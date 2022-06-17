@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState, useEffect, } from 'react'
 import ItemUser from '../components/ItemUser';
 import UserForm from '../components/UserForm';
 import { useParams } from 'react-router-dom';
@@ -20,18 +20,17 @@ const Edit = () => {
 
     const { id } = useParams();
 
-    const getData = async () => {
-        try {
-            const response = await axios.get("http://localhost:3000/users/" + id)
-            const { data } = response;
-            setUser(data);
-            console.log(response);
-        } catch (error) {
-            console.log(error);
-        }
-    }
-
     useEffect(() => {
+        const getData = async () => {
+            try {
+                const response = await axios.get(`http://localhost:3000/users/${id}`)
+                const { data } = response;
+                setUser(data);
+                console.log(response);
+            } catch (error) {
+                console.log(error);
+            }
+        }
         getData();
     }, [])
 

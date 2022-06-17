@@ -1,14 +1,14 @@
 import React from 'react'
-import ItemUser from '../components/ItemUser'
+/* import ItemUser from '../components/ItemUser' */
 import { Box, Typography } from '@mui/material'
 import UserList from '../components/UserList'
 
-const data = {
+/* const data = {
     name: "Darwin Diaz",
     country: "Colombia",
     email: "darwindiaz@example.com",
     phone: "654987321"
-}
+} */
 
 const Home = () => {
     return (

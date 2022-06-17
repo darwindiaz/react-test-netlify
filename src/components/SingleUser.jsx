@@ -1,8 +1,8 @@
 import React from 'react'
 import './styles/ItemUser.css';
-import { Card, CardContent, CardMedia, Typography, Box, Button } from '@mui/material';
-import { Link } from "react-router-dom"
-import axios from 'axios';
+import { Card, CardContent, CardMedia, Typography } from '@mui/material';
+/* import { Link } from "react-router-dom"
+import axios from 'axios'; */
 
 const SingleUser = ({
     name,
@@ -15,9 +15,9 @@ const SingleUser = ({
     return (
         <div>
             <Card sx={{
-                maxWidth: "200px",
+                maxWidth: "600px",
                 maxHeight: "200px",
-                margin: "8px auto",
+                margin: "10px auto",
                 display: "flex",
                 flexDirection: "row",
                 alignItems: "center",
@@ -43,7 +43,7 @@ const SingleUser = ({
                         <strong>Correo:</strong> {email}
                     </Typography>
                     <Typography variant="body1">
-                        <strong>Correo:</strong> {phone}
+                        <strong>Telefono:</strong> {phone}
                     </Typography>
                 </CardContent>
             </Card>

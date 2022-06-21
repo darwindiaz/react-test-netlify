@@ -1,13 +1,6 @@
 {
   "users": [
     {
-      "id": "1",
-      "name": "Darwin Diaz",
-      "country": "Colombia",
-      "email": "darwindiaz@example.com",
-      "phone": "654987321"
-    },
-    {
       "id": "2",
       "name": "Sebastian Mejia",
       "country": "Peru",

@@ -22,9 +22,9 @@ const Header = () => {
                     <Link component={RouterLink} to="/list" color="inherit">
                         Listado
                     </Link>
-                    <Link component={RouterLink} to="/user/:id" color="inherit">
+                    {/* <Link component={RouterLink} to="/user/:id" color="inherit">
                         User
-                    </Link>
+                    </Link> */}
                 </Toolbar>
             </Container>
         </AppBar>
